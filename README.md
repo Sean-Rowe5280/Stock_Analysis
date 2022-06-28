@@ -29,9 +29,42 @@ The last change within this for loop is conditional code to increase the tickeri
  
 ![image](https://user-images.githubusercontent.com/107006216/176080027-31da7af6-680f-464b-9fbf-70aa411e9c7e.png)
 
-These were the primary changes in our refractoring process. THere are some other subtle differences btw the code "AllStocksAnalysis" and "AllStocksAnalysisRefactored"
+These were the primary changes in our refractoring process. There are some other subtle differences btw the code "AllStocksAnalysis" and "AllStocksAnalysisRefactored"
 but for the purposes of this challenge im not going to go into those.
 
 ### Measure of Performance
 
-The results of our efforts can easily be see if you add timer script to clock the time it takes the original code and refactored code to run.  Our Original code took between .63 and .7 seconds. 
+The results of our efforts can easily be seen if we add timer script to clock the time it takes the original code and refactored code.  The Original code took between .63 and .7 seconds. 
+
+![image](https://user-images.githubusercontent.com/107006216/176082022-b359c673-5e08-4989-8166-81ae512972e0.png)
+![image](https://user-images.githubusercontent.com/107006216/176082099-f71822de-530a-4d96-93ab-9aa71bff03e4.png)
+
+The refactored code in comparision ran much quicker. .13 to .25 seconds. This may not seem like a significant enought improvement to justify editing our code but it could be if we analyize a much larger number of stocks and our data set increases significantly.
+
+![image](https://user-images.githubusercontent.com/107006216/176082374-4b59bb5f-11e9-452e-a67a-f473b3483545.png)
+![image](https://user-images.githubusercontent.com/107006216/176082645-2ffc2324-c6ad-4dda-865b-454f177abed4.png)
+
+## Summary
+
+### Original Code: Advantages and Disadvantages
+
+The primary advantage I found with the old code was its simplicity, it was more intuitive and very easy to follow and it accomplished what it was designed to in a reasonable time frame.  Although the code was much slower, which might be a significant disadvantage with a larger data set, in this instance the effieciency difference was negligible.
+
+### Refactored Code: Advantages and Disadvantages
+
+There are in fact both pros and cons to refactoring code and they need to be considered and wieghed against each other.  The main advantage in this example is the speed in which the code was executed. By removing nested loops from our script we reuduced the amount of processing required(more efficient) and the code completed 3-5 times faster. This efficiency improvement also makes the code more useful because we could use it on a much larger data set.  The main downside to our refactored code in this example efficiency gain really isn't worth the amoutn time spent reworking the code.  Granted in the future a significantly larger data set it might be worth it but in this case it wasn't. Also, and this perhaps is more related to my limited VBA experience, the refactored code was much more challenging to follow and work out.  The readability did not improve.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
