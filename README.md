@@ -12,15 +12,26 @@ We wrote a macro that enabled steve to perform an analysis of the 12 stocks hes 
 
 ## Results
 
-In our "AllStocksAnalysisRefractored" to improve the efficiency of the script we created a tickerindex variable which we set with a starting value 0.  We then created 3 output arrays for tickervolume(12), tickerstartingprice(12) and tickerendingprice(12) followed by a for loop 0 to 11 for these variables and set tickervolumes to zero.
+### VBA Code
+In our "AllStocksAnalysisRefactored" to improve the efficiency of the script we created a tickerindex variable which we set with a starting value 0. This enables the code to reference the stocks in our ticker array, starting with the first ticker(0), and pull in the applicabale data for the our output arrays.   We then created our 3 output arrays for tickervolume(12), tickerstartingprice(12) and tickerendingprice(12) followed by a for loop 0 to 11 for these variables where we set the inititial value to 0.
+
 ![image](https://user-images.githubusercontent.com/107006216/176061968-31cc727e-5bb9-4f67-bfa7-4bd3c856333d.png)
 
+Our next for loop if a for loop for all the rows in our data sets and we define tickervolumes using the tickerindex in order reference each individual stock ticker and calculate total volume by pulling if from the column define. Note that the tickerindex was set equal to 0 earlier so we'll need write some conditional formatting for the tickerindex to increase once its totaled all the relevant data for ticker(0).
 
+![image](https://user-images.githubusercontent.com/107006216/176077581-674e6bb8-e79c-4e6f-a46c-93b4cb80750b.png)
+
+Within this same for loop write conditional script to calculate tickerstartingprice and tickerendingprice again using the tickerindex to pull data for the appropriate stock.
+
+![image](https://user-images.githubusercontent.com/107006216/176078569-d484287b-25c5-4915-98c7-7e15ef476725.png)
+
+The last change within this for loop is conditional code to increase the tickerindex after its looped through all the rows of data for ticker(0).
  
+![image](https://user-images.githubusercontent.com/107006216/176080027-31da7af6-680f-464b-9fbf-70aa411e9c7e.png)
 
-![VBA_Challenge_2017](https://user-images.githubusercontent.com/107006216/176060950-f583fced-4358-45e0-b94f-1eab92dd1a1c.png)
-![image](https://user-images.githubusercontent.com/107006216/176061051-60bc4109-3077-4748-9af5-b6f4f704a4da.png)
+These were the primary changes in our refractoring process. THere are some other subtle differences btw the code "AllStocksAnalysis" and "AllStocksAnalysisRefactored"
+but for the purposes of this challenge im not going to go into those.
 
+### Measure of Performance
 
-![VBA_Challenge_2018](https://user-images.githubusercontent.com/107006216/176060958-25bdadc2-499f-4179-a7dc-0a412e7b6a84.png)
-![image](https://user-images.githubusercontent.com/107006216/176061004-796c3d9e-d267-4e20-9fb6-15a3cb532d3c.png)
+The results of our efforts can easily be see if you add timer script to clock the time it takes the original code and refactored code to run.  Our Original code took between .63 and .7 seconds. 
